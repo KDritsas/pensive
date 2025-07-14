@@ -25,4 +25,8 @@ defmodule Pensieve.Memories do
   def change_memory(%Memory{} = memory, attrs \\ %{}) do
     Memory.changeset(memory, attrs)
   end
+
+  def delete_memory(%Memory{} = memory) do
+    Repo.delete(memory)
+  end
 end
