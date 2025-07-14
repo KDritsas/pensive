@@ -9,7 +9,7 @@ defmodule PensieveWeb.MemoryController do
   end
 
   def show(conn, %{"id" => id}) do
-    memory = Memories.get_memory(id)
+    memory = Memories.get_memory!(id)
     render(conn, :show, memory: memory)
   end
 end
